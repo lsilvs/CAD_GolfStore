@@ -1,4 +1,11 @@
 Golfstore::Application.routes.draw do
+  
+  match '/about' => 'site#about'
+  match '/contact' => 'site#contact'
+  
+  get "site/about"
+  get "site/contact"
+
   resources :items
 
 
