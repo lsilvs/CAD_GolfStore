@@ -1,5 +1,7 @@
 Golfstore::Application.routes.draw do
   
+  get "cart/index"
+
   match '/about' => 'site#about'
   match '/contact' => 'site#contact'
   
@@ -8,6 +10,8 @@ Golfstore::Application.routes.draw do
 
   resources :items
 
+  match '/cart' => 'cart#index' 
+  match '/cart/:id' => 'cart#add'
   match '/Admin' => 'user#admin_login'
   match '/logout' => 'user#logout'
 
