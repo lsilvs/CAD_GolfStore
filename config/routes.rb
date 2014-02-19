@@ -8,6 +8,9 @@ Golfstore::Application.routes.draw do
 
   resources :items
 
+  match '/Admin' => 'user#admin_login'
+  match '/logout' => 'user#logout'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
